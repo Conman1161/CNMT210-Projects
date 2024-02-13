@@ -1,0 +1,37 @@
+.class1{
+background-color: orange;
+width: 300px;
+border-style: solid;
+padding: 25px;
+margin: 25px;
+outline-style: dashed;
+outline-color: orange;
+font-family: serif;
+}
+.class2{
+background-color: purple;
+width: 200px;
+border-style: dashed;
+border-color: black;
+/*I had to set the text to white, otherwise it's completely illegible --> */
+color: white;
+}
+.titleClass{
+color: red;
+text-decoration: underline;
+    text-transform: uppercase;
+word-spacing: 10px;
+background-color: grey;
+font-family: sans-serif;
+font-size: 300%;
+padding-right: 80px;
+padding-top: 100;
+}
+#titleDescription{
+color: orange;
+text-decoration: underline;
+text-transform: uppercase;
+letter-spacing: 10px;
+background-color: lightgrey;
+font-size: 200%;
+}

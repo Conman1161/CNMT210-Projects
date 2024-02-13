@@ -1,0 +1,9 @@
+body{
+    background-color: purple;
+}
+div{
+    background-color: gold;
+    width: 720px;
+    height: 480px;
+    padding: 20px;
+}

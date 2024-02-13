@@ -1,0 +1,34 @@
+body {
+    background-color: #512698;
+    /* background-image: url("./images/esports-center-00.jpg"); 
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 200px;
+    background-attachment: fixed; */
+  }
+h1 {
+  border-top-style: groove;
+  border-right-style: solid;
+  border-bottom-style: dotted;
+  border-left-style: ridge;
+  color: #FFC82e;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 50px;
+  margin-left: 80px;
+  padding: 25px 50px 75px 100px;
+  outline-style: groove;
+  outline-offset: 5px;
+  outline-width: 10px;
+  /* text-decoration: line-through; */
+  text-align: center;
+  text-shadow: 5px 3px black;
+  font-size: 2.5em;
+}
+p {
+  color: white;
+}
+
+div {
+  padding: 25px 50px 75px 100px;
+}

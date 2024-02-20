@@ -4,6 +4,50 @@
   <head>
     <title>My Gaming Hub - Esports</title>
     <link rel="icon" type="image/x-icon" href="images/esports.ico" />
+    <style>
+      a {
+        display: inline;
+      }
+      a.linkOne {
+        background-color: green;
+        color: white;
+        padding: 14px 25px;
+        text-align: center;
+        text-decoration: none;
+      }
+      a.linkOne:hover {
+        background-color: red;
+        text-align: left;
+      }
+      a.linkOne:active {
+        background-color: red;
+        text-align: left;
+      }
+      a.linkTwo:hover {
+        color: orange;
+      }
+      a.linkTwo:active {
+        font-family: "Courier New";
+      }
+      a.linkThree:hover {
+        background-color: white;
+      }
+      a.linkThree:active {
+        font-size: 30px;
+      }
+      a.linkFour {
+        background-color: white;
+        color: black;
+        border: 12px solid blue;
+        padding: 15px 25px;
+        text-align: left;
+        text-decoration: underline;
+      }
+      a.linkFour:hover {
+        background-color: green;
+        text-align: center;
+      }
+    </style>
   </head>
   <body
     style="
@@ -25,7 +69,7 @@
       <h3 style="background-color: burlywood">
         <pre>
             
-        <a href="index.html">Home</a>  <a href="overwatch.html">Overwatch</a>  <a href="yugioh.html">Yu-Gi-Oh!</a>  <a href="social_media.html">My Social Media</a>  <a href="">Esports @ UWSP</a>
+        <a class='linkOne' href="index.html">Home</a>  <a class='linkTwo' href="overwatch.html">Overwatch</a>  <a class='linkThree' href="yugioh.html">Yu-Gi-Oh!</a>  <a class='linkFour' href="social_media.html">My Social Media</a>  <a class='linkFive' href="esports.html">Esports @ UWSP</a>
     </pre>
       </h3>
 
@@ -35,9 +79,7 @@
         the role didn't let me expand the way I wanted. I also play for our
         Overwatch Gold team, which is the equivalent to Junior Varsity. We
         compete in matches at 7:30 PM Thursdays, so watch and enjoy at
-        <a
-          href="https://twitch.tv/uwsp_esports"
-          style="color: hsl(44, 100%, 59%)"
+        <a class="normal" href="https://twitch.tv/uwsp_esports"
           >twitch.tv/uwsp_esports</a
         >!
       </p>

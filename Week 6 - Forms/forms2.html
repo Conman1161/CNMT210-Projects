@@ -39,12 +39,25 @@
       <br /><br />
 
       <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="name999@uwsp.edu"
+        required
+      />
 
       <br /><br />
 
       <label for="phone">Phone Number:</label><br />
-      <input type="phone" id="phone" name="phone" required />
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="715-308-9999"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required
+      />
 
       <br /><br />
 
@@ -55,45 +68,15 @@
       <br /><br />
 
       <label for="major">What is your major?</label><br />
-      <input
-        type="checkbox"
-        id="major"
-        name="major"
-        value="optionOne"
-        required
-      />
+      <input type="checkbox" id="major" name="major" value="optionOne" />
       <label for="optionOne">Music Performance</label><br />
-      <input
-        type="checkbox"
-        id="major"
-        name="major"
-        value="optionTwo"
-        required
-      />
+      <input type="checkbox" id="major" name="major" value="optionTwo" />
       <label for="optionTwo">Business Informatics</label><br />
-      <input
-        type="checkbox"
-        id="major"
-        name="major"
-        value="optionThree"
-        required
-      />
+      <input type="checkbox" id="major" name="major" value="optionThree" />
       <label for="optionThree">Music Education</label><br />
-      <input
-        type="checkbox"
-        id="major"
-        name="major"
-        value="optionFour"
-        required
-      />
+      <input type="checkbox" id="major" name="major" value="optionFour" />
       <label for="optionFour">Health Informatics</label><br />
-      <input
-        type="checkbox"
-        id="major"
-        name="major"
-        value="optionFive"
-        required
-      />
+      <input type="checkbox" id="major" name="major" value="optionFive" />
       <label for="optionFive">Computer Science</label><br />
 
       <br /><br />
@@ -114,7 +97,7 @@
 
       <br /><br />
 
-      <label for="employed">What is your favorite color?</label><br />
+      <label for="employed">Are you currently employed?</label><br />
       <input type="radio" id="yes" name="employed" value="Yes" required />
       <label for="yes">Yes</label><br />
       <input type="radio" id="no" name="employed" value="No" required />

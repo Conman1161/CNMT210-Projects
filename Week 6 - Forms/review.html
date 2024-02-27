@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Loving CSS</title>
+
+    <style>
+      body {
+        background-color: orange;
+      }
+
+      h1 {
+        color: white;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      table.first {
+      }
+
+      .first tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .first tr:hover {
+        background-color: purple;
+      }
+
+      table.second {
+        border-collapse: collapse;
+
+        font-family: "Arial";
+
+        letter-spacing: 2px;
+
+        text-align: center;
+      }
+
+      .second table,
+      th,
+      td {
+        border-collapse: collapse;
+      }
+
+      .second td {
+        padding: 25px;
+      }
+
+      .second tr:nth-child(odd) {
+        background-color: lightgray;
+      }
+
+      .second tr:hover {
+        background-color: pink;
+      }
+
+      div {
+        background-color: green;
+
+        color: white;
+
+        padding: 10px;
+
+        text-align: center;
+
+        width: 200px;
+      }
+
+      div:hover {
+        background-color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Best CSS Table Page Ever!</h1>
+
+    <table style="width: 50%" class="firstone">
+      <caption>
+        Daily Schedule
+      </caption>
+
+      <tr style="background-color: red">
+        <th></th>
+
+        <th></th>
+
+        <th colspan="3">Morning</th>
+
+        <th>Lunch</th>
+
+        <th colspan="4">Afternoon</th>
+
+        <th colspan="3">Evening</th>
+      </tr>
+
+      <tr></tr>
+
+      <tr>
+        <th></th>
+
+        <th></th>
+
+        <td>9-10am</td>
+
+        <td>10-11am</td>
+
+        <td>11-12am</td>
+
+        <td>1-2pm</td>
+
+        <td>2-3pm</td>
+
+        <td>3-4pm</td>
+
+        <td>4-5pm</td>
+
+        <td>5-6pm</td>
+
+        <td>6-7pm</td>
+
+        <td>7-8pm</td>
+
+        <td>8-9pm</td>
+      </tr>
+
+      <tr>
+        <th rowspan="5">Schedule</th>
+
+        <td>Monday</td>
+
+        <td></td>
+
+        <td>CMNT 110</td>
+
+        <td>Math 209</td>
+
+        <td colspan="5">Free</td>
+
+        <td colspan="3">Work</td>
+      </tr>
+
+      <tr>
+        <td>Tuesday</td>
+
+        <td></td>
+
+        <td>CMNT 110</td>
+
+        <td colspan="4">Free</td>
+
+        <td colspan="3">CMNT 210</td>
+
+        <td colspan="2">Free</td>
+      </tr>
+
+      <tr>
+        <td>Wednesday</td>
+
+        <td></td>
+
+        <td>CMNT 110</td>
+
+        <td>Math 209</td>
+
+        <td colspan="8">Free</td>
+      </tr>
+
+      <tr>
+        <td>Thursday</td>
+
+        <td></td>
+
+        <td>CMNT 110</td>
+
+        <td>Math 209</td>
+
+        <td colspan="3">Free</td>
+
+        <td colspan="3">CMNT 210</td>
+
+        <td colspan="2">Free</td>
+      </tr>
+
+      <tr>
+        <td>Friday</td>
+
+        <td></td>
+
+        <td></td>
+
+        <td>Math 209</td>
+
+        <td colspan="8">Free</td>
+      </tr>
+    </table>
+
+    <table class="second">
+      <caption>
+        A Fancy table
+      </caption>
+
+      <tr style="background-color: green; color: white">
+        <th>Company</th>
+
+        <th>Contact</th>
+
+        <th>Country</th>
+      </tr>
+
+      <tr />
+
+      <tr>
+        <td>Alfreds Futterkiste</td>
+
+        <td>Maria Anders</td>
+
+        <td>Germany</td>
+      </tr>
+
+      <tr />
+
+      <tr>
+        <td>Berglunds Snabbkop</td>
+
+        <td>Christina Berglund</td>
+
+        <td>Sweden</td>
+      </tr>
+
+      <tr />
+
+      <tr>
+        <td>Centro Commercial Moctezume</td>
+
+        <td>Fracisco Chang</td>
+
+        <td>Mexico</td>
+      </tr>
+
+      <tr />
+
+      <tr>
+        <td>Ernst handel</td>
+
+        <td>Roland Mendel</td>
+
+        <td>Austria</td>
+      </tr>
+
+      <tr />
+    </table>
+
+    <div>something for later</div>
+  </body>
+</html>

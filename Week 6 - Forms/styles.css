@@ -1,0 +1,9 @@
+body{
+    background-color: lightseagreen;
+    color: white;
+}
+
+form{
+    border: 2px solid cyan;
+    padding: 5px;
+}

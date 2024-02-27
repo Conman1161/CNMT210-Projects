@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Page One</title>
+  </head>
+  <body>
+    <h1>The first page of my forms!</h1>
+    <h3><a href="forms2.html">forms2.html</a></h3>
+    <hr style="border: 1px solid green" />
+    <form
+      action="http://mstc.brentapresley.com/HTMLFormTest.php"
+      target="_blank"
+      method="GET"
+    >
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" placeholder="John" /><br />
+
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" placeholder="Doe" /><br />
+
+      <br /><br />
+
+      <label for="pwd">Password:</label><br />
+      <input type="password" id="pwd" name="pwd" />
+
+      <br /><br />
+
+      <label for="datemin">Enter your birthday:</label>
+      <br />
+      <input type="date" id="datemin" name="datemin" min="1919-01-01" />
+
+      <br /><br />
+
+      <label for="favColor">What is your favorite color?</label><br />
+      <input type="radio" id="red" name="favColor" value="Red" />
+      <label for="red">Red</label><br />
+      <input type="radio" id="blue" name="favColor" value="Blue" />
+      <label for="blue">Blue</label><br />
+      <input type="radio" id="green" name="favColor" value="Green" />
+      <label for="green">Green</label>
+
+      <br /><br />
+
+      <label for="class">Which class is the best?</label><br />
+      <select id="class" name="class">
+        <option value="webDev" selected>Web Development</option>
+        <option value="jazzBand">Jazz Band</option>
+        <option value="largeEns">Wind Ensemble</option>
+        <option value="piano">Piano III</option>
+        <option value="esports" disabled>Esports</option>
+      </select>
+      <br /><br />
+      <input type="checkbox" id="love" name="love" value="Yes" required />
+      <label for="love"> I love this form!</label><br />
+      <br />
+      <label for="message">Please describe today's weather:</label><br />
+
+      <textarea
+        name="message"
+        rows="8"
+        cols="60"
+        placeholder="How's the weather?"
+      ></textarea>
+
+      <br /><br />
+
+      <label for="phone">What is your phone number?</label><br />
+      <input
+        id="phone"
+        name="phone"
+        type="range"
+        value="7151234567"
+        min="1000000000"
+        max="9999999999"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>7151234567</output>
+
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

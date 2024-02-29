@@ -4,18 +4,18 @@
     <link rel="stylesheet" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forms Page One</title>
+    <title>Forms Page Two</title>
   </head>
   <body>
     <h1>The second page of my forms!</h1>
-    <h3><a href="forms1.html">forms2.html</a></h3>
+    <h3><a href="forms1.html">forms1.html</a></h3>
     <hr style="border: 1px solid green" />
     <form
       action="http://mstc.brentapresley.com/HTMLFormTest.php"
       target="_blank"
       method="GET"
     >
-      <label for="fname">First name:</label><br />
+      <label for="firstName">First name: *</label><br />
       <input
         type="text"
         id="firstName"
@@ -26,7 +26,7 @@
         autofocus
       /><br />
 
-      <label for="lname">Last name:</label><br />
+      <label for="lastName">Last name: *</label><br />
       <input
         type="text"
         id="lastName"
@@ -38,18 +38,18 @@
 
       <br /><br />
 
-      <label for="email">Email:</label><br />
+      <label for="email">Email: *</label><br />
       <input
         type="email"
         id="email"
         name="email"
-        placeholder="name999@uwsp.edu"
+        placeholder="name123@uwsp.edu"
         required
       />
 
       <br /><br />
 
-      <label for="phone">Phone Number:</label><br />
+      <label for="phone">Phone Number: *</label><br />
       <input
         type="tel"
         id="phone"
@@ -61,27 +61,27 @@
 
       <br /><br />
 
-      <label for="datemin">When did you first enroll?</label>
+      <label for="datemin">When did you first enroll? *</label>
       <br />
       <input type="date" id="dateEnrolled" name="dateEnrolled" required />
 
       <br /><br />
 
       <label for="major">What is your major?</label><br />
-      <input type="checkbox" id="major" name="major" value="optionOne" />
-      <label for="optionOne">Music Performance</label><br />
-      <input type="checkbox" id="major" name="major" value="optionTwo" />
-      <label for="optionTwo">Business Informatics</label><br />
-      <input type="checkbox" id="major" name="major" value="optionThree" />
-      <label for="optionThree">Music Education</label><br />
-      <input type="checkbox" id="major" name="major" value="optionFour" />
-      <label for="optionFour">Health Informatics</label><br />
-      <input type="checkbox" id="major" name="major" value="optionFive" />
-      <label for="optionFive">Computer Science</label><br />
+      <input type="checkbox" id="major" name="major" value="musicPerform" />
+      <label for="musicPerform">Music Performance</label><br />
+      <input type="checkbox" id="major" name="major" value="businessInfo" />
+      <label for="businessInfo">Business Informatics</label><br />
+      <input type="checkbox" id="major" name="major" value="musicEd" />
+      <label for="musicEd">Music Education</label><br />
+      <input type="checkbox" id="major" name="major" value="healthInfo" />
+      <label for="healthInfo">Health Informatics</label><br />
+      <input type="checkbox" id="major" name="major" value="compSci" />
+      <label for="compSci">Computer Science</label><br />
 
       <br /><br />
 
-      <label for="gpa">What is your GPA?</label><br />
+      <label for="gpa">What is your GPA? *</label><br />
       <input
         id="gpa"
         name="gpa"
@@ -97,7 +97,7 @@
 
       <br /><br />
 
-      <label for="employed">Are you currently employed?</label><br />
+      <label for="employed">Are you currently employed? *</label><br />
       <input type="radio" id="yes" name="employed" value="Yes" required />
       <label for="yes">Yes</label><br />
       <input type="radio" id="no" name="employed" value="No" required />
@@ -105,7 +105,8 @@
 
       <br /><br />
 
-      <label for="comments">How could we improve your experience?</label><br />
+      <label for="comments">How could we improve your experience? *</label
+      ><br />
 
       <textarea
         name="comments"

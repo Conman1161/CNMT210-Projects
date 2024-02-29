@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .header::first-letter {
+        color: gold;
+      }
+      div.header {
+        color: White;
+        position: relative;
+        text-align: center;
+        font-size: 25px;
+        background-size: cover;
+        background-image: url("images/fac_PCs.png");
+        background-repeat: no-repeat;
+        padding-top: 5%;
+      }
+      .headerLinks {
+        text-align: left;
+        background-color: white;
+      }
+      /* Create three equal columns that floats next to each other */
+      .columnQuarter {
+        float: left;
+        width: 25%;
+      }
+      .columnThird {
+        float: left;
+        width: 33.33%;
+      }
+      .columnHalf {
+        float: left;
+        width: 50%;
+      }
+      .columnQuarter {
+        float: left;
+        width: 25%;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .footer {
+        background-color: #f1f1f1;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+      }
+
+      div.gallery {
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 180px;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="header">UWSP Esports</h1>
+      <a class="headerLinks" href="https://uwsp.edu/esports">Home</a>
+      <a
+        class="headerLinks"
+        href="https://www.facebook.com/media/set/?set=a.813832504081783&type=3"
+        >Photo Gallery</a
+      >
+      <a class="headerLinks" href="https://spin.uwsp.edu/organization/esports"
+        >Join the Spin!</a
+      >
+    </div>
+    <div class="row">
+      <div class="columnHalf">
+        <h2>Stuff</h2>
+        <p>
+          We've got lots of things in the facility! Feel free to stop by and
+          play with the gear we have on-hand
+        </p>
+      </div>
+
+      <div class="columnQuarter">
+        <h2>PCs</h2>
+        <img src="images/guy.png" width="100%" />
+      </div>
+
+      <div class="columnQuarter">
+        <h2>Nintendo Switches</h2>
+        <img src="images/switches.png" width="100%" />
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_5terre.jpg">
+          <img
+            src="img_5terre.jpg"
+            alt="Cinque Terre"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_forest.jpg">
+          <img src="img_forest.jpg" alt="Forest" width="600" height="400" />
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_lights.jpg">
+          <img
+            src="img_lights.jpg"
+            alt="Northern Lights"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+
+      <div class="gallery">
+        <a target="_blank" href="img_mountains.jpg">
+          <img
+            src="img_mountains.jpg"
+            alt="Mountains"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+  </body>
+</html>

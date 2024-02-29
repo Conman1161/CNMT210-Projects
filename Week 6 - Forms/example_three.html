@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style>
+* 
+body {
+   margin: 0; /*change this number to see what happens with the margins */
+}
+
+
+
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  display: table;
+  content: "";
+  clear: both; 
+}
+.footer {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 10px;
+   position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="header">
+  <h1>Header</h1>
+ </div>
+
+
+<div >
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+</div>
+
+
+
+
+<div class="row">
+  <div class="column">
+    <h2>Column</h2>
+    <p>Column 1.</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Column 2.  
+	Do you want to create your own personal place on the Internet to start an online business or personal social site?
+In this Web Design course, students will use a variety of design software to organize, create, publish, and manage a
+web site. Course content includes creating a variety of graphic elements including video, animations, rollover
+effects, backgrounds, and page images. 
+</p>
+  </div>
+  
+  <div class="column">
+    <h2>Column</h2>
+    <p>Column 3 </p>
+  </div>
+</div>
+
+
+<h1 class="footer">This should be at the foot of the page due footer class </h1>
+<p style="font-family:courier;">This is a <b>paragraph</b> courier.</p>
+<p  style="color:blue;"> This is blue text </p>
+
+
+</body>
+</html>

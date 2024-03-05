@@ -9,14 +9,18 @@
         color: gold;
       }
       div.header {
-        color: White;
         position: relative;
-        text-align: center;
-        font-size: 25px;
+        font-size: 30px;
         background-size: cover;
+
         background-image: url("images/fac_PCs.png");
         background-repeat: no-repeat;
-        padding-top: 5%;
+        background-position: top;
+
+        /* color: white; */
+        text-align: center;
+        padding-top: 25px;
+        width: 100%;
       }
       .headerLinks {
         text-align: left;
@@ -51,45 +55,110 @@
         background-color: #f1f1f1;
         text-align: center;
         padding: 10px;
-        position: fixed;
         left: 0;
         bottom: 0;
+        font-size: 20px;
+
+        background-image: url("images/chancelor.png");
+        background-repeat: no-repeat;
+        background-position: top;
       }
 
       div.gallery {
-        margin: 5px;
-        border: 1px solid #ccc;
+        border: 3px solid #ccc;
         float: left;
-        width: 180px;
+        width: 20%;
+        height: 20%;
+        margin-right: 80px;
       }
 
       div.gallery:hover {
-        border: 1px solid #777;
+        border: 2px solid green;
+        background-color: #337d65;
       }
 
       div.gallery img {
-        width: 100%;
-        height: auto;
+        width: 150px;
+        height: 200px;
       }
 
       div.desc {
         padding: 15px;
         text-align: center;
       }
+
+      li a,
+      .dropbtn {
+        display: inline-block;
+        /* color: white; */
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+
+      li.dropdown {
+        display: inline-block;
+      }
+
+      /* Dropdown Content (Hidden by Default) */
+
+      .dropdown-content {
+        display: none;
+        position: absolute; /* positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
+
+        background-color: pink;
+        min-width: 160px;
+      }
+
+      .dropdown-content a {
+        color: green;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: goldenrod;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      li {
+        display: inline;
+      }
+      ul {
+        background-color: white;
+      }
     </style>
   </head>
   <body>
     <div class="header">
-      <h1 class="header">UWSP Esports</h1>
-      <a class="headerLinks" href="https://uwsp.edu/esports">Home</a>
-      <a
-        class="headerLinks"
-        href="https://www.facebook.com/media/set/?set=a.813832504081783&type=3"
-        >Photo Gallery</a
-      >
-      <a class="headerLinks" href="https://spin.uwsp.edu/organization/esports"
-        >Join the Spin!</a
-      >
+      <h1 style="-webkit-text-stroke: 1px black">UWSP Esports</h1>
+
+      <ul>
+        <li><a class="headerLinks" href="https://uwsp.edu/esports">Home</a></li>
+        <li>
+          <a
+            class="headerLinks"
+            href="https://www.facebook.com/media/set/?set=a.813832504081783&type=3"
+            >Photo Gallery</a
+          >
+        </li>
+        <li class="dropdown">
+          <a class="dropbtn, headerLinks">Join us!</a>
+          <div class="dropdown-content">
+            <a href="https://discord.gg/c874aK5pmZ">Discord</a>
+            <a href="https://spin.uwsp.edu/organization/esports">SPIN</a>
+          </div>
+        </li>
+      </ul>
     </div>
     <div class="row">
       <div class="columnHalf">
@@ -99,59 +168,105 @@
           play with the gear we have on-hand
         </p>
       </div>
-
+      <br />
       <div class="columnQuarter">
-        <h2>PCs</h2>
         <img src="images/guy.png" width="100%" />
       </div>
 
       <div class="columnQuarter">
-        <h2>Nintendo Switches</h2>
         <img src="images/switches.png" width="100%" />
       </div>
-
+      <br />
       <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
+        <a
+          target="_blank"
+          href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcScl41uHkBqyBfTvzO-GCkm5AwimR8O9yYdz4Hc9Mluq8W0sbXH6q632lFYdSGLteV3Gs-N"
+        >
           <img
-            src="img_5terre.jpg"
-            alt="Cinque Terre"
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcScl41uHkBqyBfTvzO-GCkm5AwimR8O9yYdz4Hc9Mluq8W0sbXH6q632lFYdSGLteV3Gs-N"
+            alt="Smash Ultimate"
             width="600"
             height="400"
           />
         </a>
-        <div class="desc">Add a description of the image here</div>
+        <div class="desc">
+          Super Smash Bros. Ultimate is a 2018 crossover fighting game developed
+          by Bandai Namco Studios and Sora Ltd. and published by Nintendo for
+          the Nintendo Switch. It is the fifth installment in the Super Smash
+          Bros. series, succeeding Super Smash Bros. for Nintendo 3DS and Wii U.
+        </div>
       </div>
 
       <div class="gallery">
-        <a target="_blank" href="img_forest.jpg">
-          <img src="img_forest.jpg" alt="Forest" width="600" height="400" />
-        </a>
-        <div class="desc">Add a description of the image here</div>
-      </div>
-
-      <div class="gallery">
-        <a target="_blank" href="img_lights.jpg">
+        <a
+          target="_blank"
+          href="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg"
+        >
           <img
-            src="img_lights.jpg"
-            alt="Northern Lights"
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Overwatch_cover_art.jpg/220px-Overwatch_cover_art.jpg"
+            alt="Overwatch"
             width="600"
             height="400"
           />
         </a>
-        <div class="desc">Add a description of the image here</div>
+        <div class="desc">
+          Overwatch was a 2016 team-based multiplayer first-person shooter game
+          by Blizzard Entertainment. The game was first released for PlayStation
+          4, Windows, and Xbox One in May 2016 and Nintendo Switch in October
+          2019. Cross-platform play was supported across all platforms.
+        </div>
       </div>
 
       <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
+        <a
+          target="_blank"
+          href="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S2_1200x1600-9ebf575033287e2177106da5ff45c1d4"
+        >
           <img
-            src="img_mountains.jpg"
-            alt="Mountains"
+            src="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S2_1200x1600-9ebf575033287e2177106da5ff45c1d4"
+            alt="Valorant"
             width="600"
             height="400"
           />
         </a>
-        <div class="desc">Add a description of the image here</div>
+        <div class="desc">
+          Valorant is a free-to-play first-person tactical hero shooter
+          developed and published by Riot Games, for Windows. Teased under the
+          codename Project A in October 2019, the game began a closed beta
+          period with limited access on April 7, 2020, followed by a release on
+          June 2, 2020.
+        </div>
       </div>
+
+      <div class="gallery">
+        <a
+          target="_blank"
+          href="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg/220px-Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg/220px-Tom_Clancy%27s_Rainbow_Six_Siege_cover_art.jpg"
+            alt="Rainbow Six: Siege"
+            width="600"
+            height="400"
+          />
+        </a>
+        <div class="desc">
+          Tom Clancy's Rainbow Six® Siege is an elite, realistic, tactical
+          team-based shooter where superior planning and execution triumph. It
+          features 5v5 attack vs. defense gameplay and intense close-quarters
+          combat in destructible environments.
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="footer">
+      <h1 style="-webkit-text-stroke: 1px white">UWSP Esports</h1>
+      <h3 style>Thank you for viewing our page!</h3>
+      <p>
+        We hope that you take some time and stop by our facility sometime! We
+        have lots of games to offer and lots of fun to be had. We hope to see
+        you soon!
+      </p>
     </div>
   </body>
 </html>

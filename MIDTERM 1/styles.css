@@ -63,7 +63,7 @@ li.dropdown {
 
 li a:hover,
 .dropdown:hover .dropbtn {
-    background-color: purple;
+    background-color: red;
     color: white;
 }
 
@@ -89,7 +89,7 @@ div.dropdown-content a:not(:first-child){
 }
 
 div.dropdown-content a:hover {
-    background-color: purple;
+    background-color: red;
     color: white;
 }
 
@@ -98,5 +98,34 @@ div.dropdown-content a:hover {
 }
 
 div.footer{
+    /* position: fixed; */
+    width: 99.5%;
+    bottom: 10px;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, .5);
+}
 
+div.content{
+
+}
+
+table{
+    border-collapse: collapse;
+}
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+    
+}
+tr:nth-child(odd){
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+}
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, .5);
+}
+tr:nth-child(1){
+    background-color: #ebd0b3;
+    color: black;
 }

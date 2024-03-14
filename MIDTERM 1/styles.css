@@ -17,13 +17,7 @@ p{
 div.header{
     position: relative;
     background-size: cover;
-
-    background-image: url("images/tummyache.png");
-    background-repeat: no-repeat;
-    background-position: top;
-
     color: white;
-   
 }
 h1.header{
     padding: 10px;
@@ -146,12 +140,35 @@ flex: 1;
 /* float: right; */
 }
 
-@media screen and (max-width: 950px) {
+div.thirdsColumns{
+    font-size: large;
+    width: 33%;
+    display: inline;
+    float: left;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+div.thirdsColumns:nth-child(odd){
+    border-style: ridge;
+}
+div.thirdsColumns:nth-child(even) {
+    border-style: inset;
+}
+
+@media screen and (max-width: 975px) {
     div.leftHalf, div.rightHalf {
         width: 100%;
     }
     div.rightHalf{
         display: none;
+    }
+}
+
+@media screen and (max-width: 875px) {
+
+    div.thirdsColumns {
+        width: 100%;
     }
 }
 
@@ -165,15 +182,29 @@ div.footer {
     left: 0px;
     bottom: 0px;
     padding: 10px 10px;
-    height: 2.5rem;
+    margin-top: 15px;
     background-color: rgba(255, 255, 255, .5);
 }
 
 div.gallery {
     margin: 5px;
+    margin-bottom: 10px;
     border: 1px solid black;
     float: left;
     width: 180px;
+}
+
+div.galleryInfo {
+    margin: 5px;
+    margin-bottom: 10px;
+    float: left;
+    font-size: 15px;
+    font-style: italic;
+}
+
+div.descInfo {
+    padding: 15px;
+    text-align: left;
 }
 
 div.gallery:hover {
@@ -188,4 +219,8 @@ div.gallery img {
 div.desc {
     padding: 15px;
     text-align: center;
+}
+
+img.notTransparentImage{
+    padding-top: 20px;
 }

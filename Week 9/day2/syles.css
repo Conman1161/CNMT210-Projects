@@ -1,0 +1,9 @@
+@charset "utf-8";
+.plain {
+	background: center;
+	margin-top: 50px;
+	clear: both;
+	float: left;
+	min-height: 287px;
+	min-width: 107px;
+}

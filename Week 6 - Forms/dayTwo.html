@@ -137,8 +137,42 @@
         background-color: white;
       }
     </style>
+  <script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+  <script src="../jQueryAssets/jquery-ui-effects.custom.min.js"></script>
+  <script type="text/javascript">
+function MM_DW_effectFade(obj,method,effect,speed)
+{
+    obj[method](effect, {}, speed);
+}
+function MM_DW_effectBounce(obj,method,effect,direction,distance,mode,times,speed)
+{
+    obj[method](effect, { direction:direction,distance:distance,mode:mode,times:times}, speed);
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+  </script>
   </head>
-  <body>
+  <body onLoad="MM_preloadImages('images/drawing1.png')">
     <div class="header">
       <h1 style="-webkit-text-stroke: 1px black">UWSP Esports</h1>
 
@@ -177,7 +211,7 @@
         <img src="images/switches.png" width="100%" />
       </div>
       <br />
-      <div class="gallery">
+      <div class="gallery" onMouseOver="MM_DW_effectFade($(this),'toggle','fade',1000)">
         <a
           target="_blank"
           href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcScl41uHkBqyBfTvzO-GCkm5AwimR8O9yYdz4Hc9Mluq8W0sbXH6q632lFYdSGLteV3Gs-N"
@@ -186,7 +220,7 @@
             src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcScl41uHkBqyBfTvzO-GCkm5AwimR8O9yYdz4Hc9Mluq8W0sbXH6q632lFYdSGLteV3Gs-N"
             alt="Smash Ultimate"
             width="600"
-            height="400"
+            height="400" id="Image1"
           />
         </a>
         <div class="desc">
@@ -209,7 +243,7 @@
             height="400"
           />
         </a>
-        <div class="desc">
+        <div class="desc" onClick="MM_DW_effectBounce($(this),'effect','bounce','up',20,'toggle',5,1000)">
           Overwatch was a 2016 team-based multiplayer first-person shooter game
           by Blizzard Entertainment. The game was first released for PlayStation
           4, Windows, and Xbox One in May 2016 and Nintendo Switch in October
@@ -226,7 +260,7 @@
             src="https://cdn1.epicgames.com/offer/cbd5b3d310a54b12bf3fe8c41994174f/EGS_VALORANT_RiotGames_S2_1200x1600-9ebf575033287e2177106da5ff45c1d4"
             alt="Valorant"
             width="600"
-            height="400"
+            height="400" onMouseOver="MM_swapImage('Image1','','images/drawing1.png',1)" onMouseOut="MM_swapImgRestore()"
           />
         </a>
         <div class="desc">

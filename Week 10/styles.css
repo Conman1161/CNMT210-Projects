@@ -10,7 +10,7 @@ img.centeredImage{
     margin-right: auto;
 }
 
-img#frontCover{
+#frontCover{
     width: 75%;
 }
 
@@ -23,8 +23,8 @@ a.storeLocation{
     border-color: blueviolet;
     background-color: lightblue;
     color: blueviolet;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 5%;
     padding-bottom: 5%;
     display: block;
@@ -33,18 +33,30 @@ a.storeLocation{
     margin-right: auto;
     margin-bottom: 5px;
     font-size: 16px;
-}
+}   
 
-div.orderBook{
+div.orderBook, div.bookSignings, div.downloadContent{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 98%;
+    max-width: 70%;
 }
 
 table.orderBookTable{
     padding-left: 5px;
     padding-right: 5px;
+}
+
+table.bookSigningLocations{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+}
+
+table.bookSigningLocations th{
+ font-style: italic;
+ text-decoration: underline;
+ text-align: left;
 }
 
 ul {
@@ -54,9 +66,11 @@ padding: 0;
 overflow: hidden;
 background-color: darkslateblue;
 }
+
 li {
 float: left;
 }
+
 /* The container - needed to position the dropdown content */
 li a,
 .dropbtn {
@@ -92,4 +106,47 @@ background-color: goldenrod;
 }
 .dropdown:hover .dropdown-content {
 display: block;
+}
+
+div.bookSignings h2, h3, h5{
+    text-align: center;
+}
+
+div.bookSignings h2{
+    padding-top: 5px;
+}
+
+div.bookSignings h3 {
+    font-weight: normal;
+}
+
+div.bookSignings h5 {
+    font-weight: normal;
+}
+
+#bookTrailer{
+ padding-top: 20px;   
+}
+
+#mapImage{
+    max-width: 30%;
+}
+
+table.downloadableContentTable tr{
+    max-width: 40%;
+}
+
+img.downloadableThumbnail{
+    max-width: 25%;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+div.downloadContent p{
+    max-width: 60%;
+}
+
+area {
+    cursor: pointer;
 }

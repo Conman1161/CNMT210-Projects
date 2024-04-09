@@ -23,16 +23,64 @@
           <td style="width: 25%; text-align: center">
             <h2><b>Order your copy Today!</b></h2>
             <br />
-            <a href="https://amazon.com" class="storeLocation">Amazon</a>
+            <a
+              href="https://www.amazon.com/dp/125075075X?"
+              class="storeLocation"
+              >Amazon</a
+            >
+            <a
+              href="https://www.barnesandnoble.com/w/the-one-and-only-sparkella-channing-tatum/1137563293;jsessionid=6543124BAD491CB19BEBA3F465C1C15A.prodny_store02-atgap01?ean=9781250750754"
+              class="storeLocation"
+              >Barnes And Noble</a
+            >
+            <a
+              href="https://www.booksamillion.com/product/9781250750754"
+              class="storeLocation"
+              >Books a Million</a
+            >
+            <a
+              href="https://bookshop.org/p/books/the-one-and-only-sparkella-channing-tatum/15083988?ean=9781250750754&ref=&source=IndieBound&title="
+              class="storeLocation"
+              >Bookshop.org</a
+            >
+            <a
+              href="https://www.indigo.ca/en-ca/the-one-and-only-sparkella/9781250750754.html"
+              class="storeLocation"
+              >Indigo</a
+            >
+            <a
+              href="https://www.target.com/p/the-one-and-only-sparkella-target-exclusive-edition-by-channing-tatum-hardcover/-/A-82032425#lnk=sametab"
+              class="storeLocation"
+              >Target</a
+            >
+            <a
+              href="https://www.audible.com/pd/The-One-and-Only-Sparkella-Audiobook/1250795354?qid=1620136598&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&pf_rd_r=CZSBQ36G3V7H1V3MCYVC"
+              class="storeLocation"
+              >Audible (Audiobook)</a
+            >
+            <a
+              href="https://libro.fm/audiobooks/9781250795359"
+              class="storeLocation"
+              >Libro.fm (Audiobook)</a
+            >
           </td>
           <td>
             <img
               id="frontCover"
               class="centeredImage"
               src="images/3dcover_sparkella.png"
+              usemap="#cover-map"
             />
+
+            <map name="cover-map">
+              <area
+                onclick="secretPopup('Congrats, you found my secret message!')"
+                coords="280,362,91W"
+                shape="circle"
+              />
+            </map>
           </td>
-          <td style="width: 25%">
+          <td style="width: 25%" id="summary">
             <b>
               Channing Tatum's picture book debut is a charming ode to
               self-esteem and the love between a father and daughter.
@@ -55,6 +103,25 @@
           </td>
         </tr>
       </table>
+      <center>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/AgZnd-42nds?si=xFKKznEFeaZG9OQg"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          id="bookTrailer"
+        ></iframe>
+      </center>
     </div>
+
+    <script>
+      function secretPopup(text) {
+        window.alert(text);
+      }
+    </script>
   </body>
 </html>

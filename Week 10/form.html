@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>The One and Only Sparkella</title>
+  </head>
+  <body>
+    <img class="centeredImage" src="images/title-treatment_sparkella.png" />
+
+    <br />
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="signings.html">Signed Copies</a></li>
+      <li><a href="downloads.html">Downloadables</a></li>
+      <li><a href="creators.html">Creators</a></li>
+      <li><a href="form.html">Stay Connected</a></li>
+    </ul>
+    <br />
+    <div class="formDiv">
+      <center>
+        <h1>Stay connected!</h1>
+        <p>
+          Fill out our form below to stay up to date will all things Sparkella!
+        </p>
+      </center>
+      <form>
+        <center>
+          <p><b>Sign Up for Updates</b></p>
+        </center>
+        <label for="firstName">*First Name</label>
+        <input type="text" name="firstName" required />
+        <label for="lastName">*Last Name</label>
+        <input type="text" name="lastName" required /><br /><br />
+        <label for="email">*Email Address</label>
+        <input type="email" name="email" required /><br /><br />
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" name="phoneNumber" /><br /><br />
+        <label for="birthMonth">*Birth Month</label>
+        <input type="month" name="birthMonth" required />
+        <label for="birthYear">*Birth Year</label>
+        <input
+          type="number"
+          name="birthMonth"
+          min="1900"
+          max="2099"
+          step="1"
+          required
+        />
+      </form>
+    </div>
+
+    <script>
+      function secretPopup(text) {
+        window.alert(text);
+      }
+    </script>
+  </body>
+</html>

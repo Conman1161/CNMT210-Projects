@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>The One and Only Sparkella</title>
+    <title>Creators of Sparkella</title>
   </head>
   <body>
     <img class="centeredImage" src="images/title-treatment_sparkella.png" />
@@ -20,12 +20,19 @@
     <br />
     <div class="aboutTheCreators">
       <center>
+        <br />
         <h2>About the Creators</h2>
         <br />
         <table>
           <tr>
             <td>
-              <img class="creatorPhotos" src="images/tatem_photo.png" />
+              <img
+                class="creatorPhotos"
+                id="tatemPhoto"
+                src="images/tatem_photo.png"
+                onmouseover="this.src='images/tatum_tux.png'"
+                onmouseleave="this.src='images/tatem_photo.png'"
+              />
             </td>
             <td>
               <p class="authorBio">
@@ -45,7 +52,11 @@
           </tr>
           <tr>
             <td>
-              <img class="creatorPhotos" src="images/kim_photo.png" />
+              <img
+                class="creatorPhotos"
+                src="images/kim_photo.png"
+                id="kimPhoto"
+              />
             </td>
             <td>
               <p class="authorBio">

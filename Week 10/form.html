@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>The One and Only Sparkella</title>
+    <title>Stay Connected</title>
   </head>
   <body>
     <img class="centeredImage" src="images/title-treatment_sparkella.png" />
@@ -25,12 +25,16 @@
           Fill out our form below to stay up to date will all things Sparkella!
         </p>
       </center>
-      <form>
+      <form
+        action="http://mstc.brentapresley.com/HTMLFormTest.php"
+        target="_blank"
+        method="GET"
+      >
         <center>
           <p><b>Sign Up for Updates</b></p>
         </center>
         <label for="firstName">*First Name</label>
-        <input type="text" name="firstName" required />
+        <input type="text" name="firstName" required /><br /><br />
         <label for="lastName">*Last Name</label>
         <input type="text" name="lastName" required /><br /><br />
         <label for="email">*Email Address</label>
@@ -38,7 +42,20 @@
         <label for="phoneNumber">Phone Number</label>
         <input type="tel" name="phoneNumber" /><br /><br />
         <label for="birthMonth">*Birth Month</label>
-        <input type="month" name="birthMonth" required />
+        <select id="birthMonth" name="birthMonth">
+          <option selected>January</option>
+          <option>February</option>
+          <option>March</option>
+          <option>April</option>
+          <option>May</option>
+          <option>June</option>
+          <option>July</option>
+          <option>August</option>
+          <option>September</option>
+          <option>October</option>
+          <option>November</option>
+          <option>December</option></select
+        ><br /><br />
         <label for="birthYear">*Birth Year</label>
         <input
           type="number"
@@ -47,7 +64,16 @@
           max="2099"
           step="1"
           required
-        />
+        /><br /><br />
+        <label for="pronouns">Pronouns</label>
+        <input type="text" name="pronouns" />
+        <br />
+        <br />
+        <label for="submit"></label>
+        <!-- intentionally left blank for formatting -->
+        <input type="submit" value="Submit" />
+        <br />
+        <br />
       </form>
     </div>
 

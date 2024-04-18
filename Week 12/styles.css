@@ -1,0 +1,102 @@
+p, h1 {
+    color:white;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+}
+body{
+    background-color: black;
+}
+p.infoText{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+}
+
+form{
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0px;
+}
+
+button{
+    text-align: center;
+    margin-top: 0px;
+}
+
+h1{
+    color: purple;
+}
+p#countdown{
+    color:goldenrod
+}
+
+h3{
+    color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3#gradInfo{
+    max-width: 60%;
+}
+
+img{
+    max-width: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.animatedImage{
+    width: 5%;
+    margin-left: 0px;
+    margin-right: 0px;
+    animation: rotation 10s infinite linear;
+    transition: width 5s;
+}
+
+img.animatedImage:hover{
+    width:35%
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+        margin-left: 0%;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        margin-left: 95%;
+    }
+
+    100% {
+        transform: rotate(359deg);
+        margin-left: 0%;
+    }
+}
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+#float{
+    animation: float 6s ease-in-out infinite;
+}

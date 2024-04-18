@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="../jQueryAssets/jquery-1.11.1.min.js"></script>
+    <script src="../jQueryAssets/jquery-ui-effects.custom.min.js"></script>
+    <script type="text/javascript">
+      function MM_DW_effectFade(obj, method, effect, speed) {
+        obj[method](effect, {}, speed);
+      }
+    </script>
+  </head>
+  <body>
+    <a href="https://en.wikipedia.org/wiki/Graduation"
+      ><h1>Time until Graduation:</h1></a
+    >
+
+    <p
+      id="countdown"
+      onMouseOver="MM_DW_effectFade($('#countdown'),'hide','fade',1000)"
+      onMouseOut="MM_DW_effectFade($(this),'show','fade',1000)"
+    >
+      Loading...
+    </p>
+    <p class="infoText">
+      Not accurate? Select your actual graduation date below
+    </p>
+    <form>
+      <label for="gradDateTime" id="newGradDateTimeLabel"
+        >Graduation Date:</label
+      >
+      <input
+        type="datetime"
+        for="newGradDateTime"
+        placeholder="Apr 18, 2024 17:50:00"
+        id="newGradDateTime"
+      />
+      <button type="submit" form="gradDateTime" onclick="setNewDateTime()">
+        Adjust Graduation Date
+      </button>
+    </form>
+
+    <h3 id="gradInfo">
+      Graduation is a special time for all. It only happens once, so it's best
+      to make the most of it. Once the timer finishes, you're done with college!
+      Make sure to take time to celebrate and enjoy yourself.
+    </h3>
+
+    <img src="images/throw_caps.png" id="float" />
+    <img class="animatedImage" src="images/download.png" />
+
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Apr 18, 2024 17:50:00").getTime();
+
+      // Update the count down every 1 second
+      var x = setInterval(function () {
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="countdown"
+        // If a value is 0, hide it
+        document.getElementById("countdown").innerHTML = `
+        ${days == 0 ? "" : `${days}d`}
+        ${hours == 0 ? "" : `${hours}h`}
+        ${minutes == 0 ? "" : `${minutes}m`}
+        ${seconds}s`; // Seconds should always be visible
+
+        // If the count down is over, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "CONGRATULATIONS!";
+          window.alert("Congratulations, you're graduated!");
+        }
+      }, 1000);
+
+      let setNewDateTime = function () {
+        let newDate = new Date(
+          document.getElementById("newGradDateTime").value
+        );
+        if (newDate == "Invalid Date") {
+          window.alert(
+            "You didn't use the correct format! Please try again\n(MMM DD, YYYY HH:MM:SS)"
+          );
+        } else {
+          countDownDate = newDate;
+        }
+      };
+    </script>
+  </body>
+</html>

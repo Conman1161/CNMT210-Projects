@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Index</title>
+    <style>
+      /* (A) ENTIRE PAGE */
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+      }
+      body {
+        position: relative;
+        padding: 10px;
+        margin: 0;
+        overflow-x: hidden;
+      }
+      :root {
+        --bg-color-a: green; /* page header + form label */
+        --bg-color-b: #404040; /* calendar header */
+        --bg-color-c: #d73a3a; /* buttons */
+      }
+      .hide {
+        display: none !important;
+      }
+
+      /* (B) PERIOD SELECTOR */
+      #calPeriod {
+        padding: 15px;
+        background: var(--bg-color-a);
+      }
+      #calPeriod input,
+      #calPeriod select {
+        font-size: 24px;
+        border: 0;
+        outline: none;
+        color: #fff;
+        background: 0;
+        cursor: pointer;
+      }
+      #calPeriod option {
+        color: #000;
+      }
+      #calYear {
+        width: 100px;
+        margin-left: 10px;
+      }
+
+      /* (C) CALENDAR */
+      /* (C1) SHARED */
+      .calHead,
+      .calRow {
+        display: flex;
+      }
+      .calCell {
+        width: 14.2857%;
+        transition: color 500ms, background 500ms;
+      }
+
+      /* (C2) HEADER - DAY NAMES */
+      .calHead .calCell {
+        color: orange;
+        background: var(--bg-color-b);
+        font-weight: 700;
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      /* (C3) BODY - INDIVIDUAL DAYS */
+      .calBlank {
+        background: #eee;
+      }
+      .calToday {
+        background: #feffd3;
+      }
+      .calToday .cellDate {
+        color: purple;
+      }
+      .calBody .calCell {
+        border: 1px solid #f5f5f5;
+        min-height: 80px;
+      }
+      .cellDate,
+      .evt {
+        padding: 5px;
+        color: red;
+      }
+      .cellDate {
+        font-size: 14px;
+        font-weight: 700;
+        color: #b5b5b5;
+      }
+      .evt {
+        font-size: 14px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .calCell:hover {
+        background: orange;
+        color: white;
+      }
+
+      /* (D) EVENT FORM */
+      #calForm {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100vw;
+        height: 100%;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      #calForm:is([open]) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      #calForm form {
+        position: relative;
+        width: 450px;
+        padding: 15px;
+        border-radius: 10px;
+        background: #fff;
+      }
+      #evtClose {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        color: #b12020;
+        font-size: 28px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #calForm h2 {
+        margin: 0 0 15px 0;
+      }
+      #calForm label,
+      #calForm input[type="text"],
+      #calForm textarea {
+        width: 100%;
+      }
+      #calForm label {
+        color: #a1a1a1;
+        font-weight: 700;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+      #calForm input[type="text"],
+      #calForm textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #eee;
+        background: #f5f5f5;
+      }
+      #calForm textarea {
+        height: 100px;
+        resize: none;
+      }
+      #calForm input[type="button"],
+      #calForm input[type="submit"] {
+        border: 0;
+        padding: 10px;
+        margin: 10px 2px 0 0;
+        color: #fff;
+        background: var(--bg-color-c);
+        cursor: pointer;
+      }
+
+      /* (X) DOES NOT MATTER */
+      #code-boxx {
+        font-weight: 600;
+        margin-top: 30px;
+      }
+      #code-boxx a {
+        display: inline-block;
+        border: 0;
+        padding: 5px;
+        text-decoration: none;
+        background: #b90a0a;
+        color: #fff;
+      }
+      @keyframes bouncingCube {
+        0% {
+          margin-left: 0%;
+          background-color: red;
+        }
+        50% {
+          margin-left: 80%;
+          background-color: blue;
+        }
+        100% {
+          margin-left: 0%;
+          background-color: red;
+        }
+      }
+
+      div.animation {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: bouncingCube;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Best Calendar Ever!</h1>
+    <!-- (A) PERIOD SELECTOR -->
+    <div id="calPeriod">
+      <select id="calMonth"></select>
+      <input type="number" id="calYear" />
+    </div>
+
+    <!-- (B) CALENDAR -->
+    <div id="calWrap"></div>
+
+    <!-- (C) EVENT FORM -->
+    <dialog id="calForm">
+      <form method="dialog">
+        <div id="evtClose">X</div>
+        <h2>CALENDAR EVENT</h2>
+        <label>Date</label>
+        <input type="text" id="evtDate" readonly />
+        <label>Appointment Information</label>
+        <textarea id="evtTxt" required></textarea>
+
+        <input id="evtDel" type="button" value="Delete" />
+        <input id="evtSave" type="submit" value="Save" />
+      </form>
+    </dialog>
+
+    <script src="Cal.js"></script>
+    <br />
+    <div class="animation"
+  </body>
+</html>

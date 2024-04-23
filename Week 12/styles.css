@@ -100,3 +100,28 @@ img.animatedImage:hover{
 #float{
     animation: float 6s ease-in-out infinite;
 }
+
+form.messageForm{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+img.campusMap {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.socialMedias{
+    margin: 0 auto;
+    text-align: center;
+}
+
+img.socialMediaItem{
+    max-width: 2%;
+    max-height: 2%;
+    display: inline-block;
+}

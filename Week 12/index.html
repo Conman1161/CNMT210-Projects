@@ -23,6 +23,7 @@
     >
       Loading...
     </p>
+    <img class="animatedImage" src="images/download.png" />
     <p class="infoText">
       Not accurate? Select your actual graduation date below
     </p>
@@ -48,7 +49,66 @@
     </h3>
 
     <img src="images/throw_caps.png" id="float" />
-    <img class="animatedImage" src="images/download.png" />
+    <br />
+
+    <form
+      action="http://mstc.brentapresley.com/HTMLFormTest.php"
+      target="_blank"
+      method="GET"
+      class="messageForm"
+    >
+      <label for="name">Your Name</label><br />
+      <input type="text" id="name" name="name" placeholder="Full Name" />
+      <br />
+
+      <label for="message">Enter your message here:</label><br />
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Put your kind works here!"
+        style="max-width: 30%; max-height: 15%"
+      ></textarea>
+      <br />
+      <input type="submit" />
+    </form>
+
+    <br />
+    <h1>Campus Map</h1>
+    <br />
+    <img src="images/campusmap.png" usemap="#campusMap" id="campusMap" />
+    <map name="campusMap">
+      <area
+        shape="poly"
+        coords="85,335,84,318,114,318,115,325,117,322,122,321,121,325,132,325,132,319,149,320,148,331,157,332,157,347,133,349,115,347,115,351,99,350,99,336"
+        href="https://www.uwsp.edu/"
+        target="new"
+      />
+      <area
+        shape="rect"
+        coords="228,255,292,304"
+        href="https://www.uwsp.edu/"
+        target="new"
+      />
+      <area
+        shape="rect"
+        coords="53,223,67,314"
+        href="https://www.uwsp.edu/"
+        target="new"
+      />
+    </map>
+
+    <div class="socialMedias">
+      <h3>Share the page!</h3>
+      <a href="https://twitter.com"
+        ><img class="socialMediaItem" src="images/twitter.png"
+      /></a>
+      <a href="https://facebook.com"
+        ><img class="socialMediaItem" src="images/facebook.png"
+      /></a>
+      <a href="https://truthsocial.com"
+        ><img class="socialMediaItem" src="images/truthsocial.png"
+      /></a>
+    </div>
 
     <script>
       // Set the date we're counting down to

@@ -1,0 +1,110 @@
+/* HEADER */
+body{
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+div.headerDiv{
+    background-color: grey;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+div.headerDiv ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+div.headerDiv li {
+float: left;
+}
+
+/* The container - needed to position the dropdown content */
+div.headerDiv li a,
+.dropbtn {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 1vw 2vw;
+text-decoration: none;
+}
+
+div.headerDiv li a:hover,
+.dropdown:hover .dropbtn {
+background-color: goldenrod;
+}
+
+div.headerDiv li.dropdown {
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+div.headerDiv .dropdown-content {
+display: none;
+position: absolute; /* positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
+background-color: grey;
+min-width: 160px;
+}
+
+div.headerDiv .dropdown-content a {
+color: white;
+padding: 1vw 2vw;
+text-decoration: none;
+display: block;
+text-align: left;
+}
+
+div.headerDiv .dropdown-content a:hover {
+background-color: goldenrod;
+}
+
+div.headerDiv .dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* PRIMARY PAGE CONTENT */
+div.mainContent{
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightslategrey;
+}
+
+div.halfWidth{
+    width: 49%;
+    /* background-color: blue; */
+    display: inline-block;
+}
+
+div.quarterWidth {
+    width: 24.5%;
+    background-color: orange;
+    display: inline-block;
+}
+
+div.thirdWidth {
+    background-color: green;
+    width: 33.3333%;
+    display: inline-block;
+}
+
+div.halfHeight{
+    height: 49%;
+    background-color: #333;
+}
+
+div.mainContent h2, p{
+    margin-left: 2%;
+}
+
+div.mainContent img{
+    max-width: 25%;
+    margin-left: 70%;
+}

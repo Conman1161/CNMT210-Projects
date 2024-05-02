@@ -12,6 +12,7 @@ div.headerDiv{
     margin-right: auto;
     text-align: center;
     padding-bottom: 1%;
+    padding-top: 5%;
 }
 
 div.headerDiv ul {
@@ -34,11 +35,13 @@ color: white;
 text-align: center;
 padding: 1vw 2vw;
 text-decoration: none;
+border: solid 1px transparent;
 }
 
 div.headerDiv li a:hover,
 .dropdown:hover .dropbtn {
 background-color: goldenrod;
+border: solid 1px black;
 }
 
 div.headerDiv li.dropdown {
@@ -81,18 +84,21 @@ div.halfWidth{
     width: 49%;
     /* background-color: blue; */
     display: inline-block;
+    vertical-align: top;
 }
 
 div.quarterWidth {
     width: 24.5%;
     background-color: orange;
     display: inline-block;
+    vertical-align: top;
 }
 
 div.thirdWidth {
-    background-color: green;
-    width: 33.3333%;
+    /* background-color: green; */
+    width: 33%;
     display: inline-block;
+    vertical-align: top;
 }
 
 div.halfHeight{
@@ -100,11 +106,13 @@ div.halfHeight{
     background-color: #333;
 }
 
-div.mainContent h2, p{
+div.mainContent h2, div.mainContent p{
     margin-left: 2%;
+    max-width: 70%;
 }
 
 div.mainContent img{
-    max-width: 25%;
-    margin-left: 70%;
+    margin-top: 5%;
+    max-width: 65%;
+    /* margin-left: 40%; */
 }

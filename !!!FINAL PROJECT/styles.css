@@ -11,8 +11,9 @@ div.headerDiv{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding-bottom: 1%;
+    /* padding-bottom: 1%; */
     padding-top: 5%;
+    border-radius: 10px;
 }
 
 div.headerDiv ul {
@@ -21,6 +22,7 @@ margin: 0;
 padding: 0;
 overflow: hidden;
 background-color: #333;
+    border-radius: 10px;
 }
 
 div.headerDiv li {
@@ -36,12 +38,18 @@ text-align: center;
 padding: 1vw 2vw;
 text-decoration: none;
 border: solid 1px transparent;
+
 }
 
 div.headerDiv li a:hover,
 .dropdown:hover .dropbtn {
-background-color: goldenrod;
-border: solid 1px black;
+    background-color: #512698;
+    border: solid 1px black;
+}
+
+div.headerDiv li a:hover:nth-of-type(even),
+.dropdown:hover .dropbtn:nth-of-type(even){
+    background-color: #512698;
 }
 
 div.headerDiv li.dropdown {
@@ -65,7 +73,7 @@ text-align: left;
 }
 
 div.headerDiv .dropdown-content a:hover {
-background-color: goldenrod;
+background-color: #FFC82e;
 }
 
 div.headerDiv .dropdown:hover .dropdown-content {
@@ -78,6 +86,12 @@ div.mainContent{
     margin-left: auto;
     margin-right: auto;
     background-color: lightslategrey;
+    border-radius: 10px;
+    padding-bottom: 1%;
+}
+
+div.mainContent h2::first-letter{
+    font-size: 200%;
 }
 
 div.halfWidth{
@@ -115,4 +129,17 @@ div.mainContent img{
     margin-top: 5%;
     max-width: 65%;
     /* margin-left: 40%; */
+}
+
+form {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+button:hover span {
+    display: none
+}
+
+form button#submit:hover:before{
+content: "Yes, submit to me!";
 }

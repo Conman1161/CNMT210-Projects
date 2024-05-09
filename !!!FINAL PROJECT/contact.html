@@ -44,12 +44,69 @@
         </p>
       </div>
       <div class="halfWidth">
-        <form>
-          <label for="firstName">First Name</label><br />
-          <input type="text" id="firstName" name="firstName" /><br />
+        <form
+          action="http://mstc.brentapresley.com/HTMLFormTest.php"
+          target="_blank"
+          method="GET"
+        >
+          <label for="firstName">First Name*</label><br />
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            required
+            placeholder="John"
+            maxlength="30"
+          /><br />
 
-          <label for="lastName">Last Name</label> <br />
-          <input type="text" id="lastName" name="lastName" />
+          <label for="lastName">Last Name*</label> <br />
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            required
+            placeholder="Doe"
+          />
+
+          <br />
+          <label for="message">Message to Me*</label> <br />
+          <textarea
+            id="message"
+            name="message"
+            required
+            placeholder="What would you like to say?"
+          ></textarea>
+          <br />
+          <label for="outreach">How did you hear about my site?*</label> <br />
+          <select name="outreach" id="outreach">
+            <option value="default" selected="selected" disabled>
+              Select a valid option
+            </option>
+            <option value="Twitter">Twitter</option>
+            <option value="Facebook">Facebook</option>
+            <option value="In-Class">In-class</option>
+            <option value="Dream" disabled>
+              It was revealed to me in a dream
+            </option>
+          </select>
+          <br />
+          <label for="birthday">When is your birthday?*</label> <br />
+          <input type="date" id="birthday" name="birthday" required /><br />
+          <label for="checkbox"
+            >Do you agree to forfeit your entire Self to me upon your demise, no
+            matter the circumstance?
+          </label>
+          <br />
+          <input
+            type="checkbox"
+            id="checkbox"
+            name="soulAgreement"
+            required
+            value="Haha, just kidding :)"
+          />Yes, I do
+          <br />
+          <br />
+          <button id="submit" type="submit"><span>Submit</span></button>
         </form>
       </div>
     </div>

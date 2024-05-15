@@ -7,6 +7,12 @@
     <title>My Biography</title>
   </head>
   <body>
+    <script src="scripts.js"></script>
+    <script>
+      window.onload = function () {
+        startGradTimer();
+      };
+    </script>
     <div class="headerDiv">
       <h1>Welcome to my Portfolio Website!</h1>
       <ul>
@@ -66,16 +72,13 @@
       <div class="halfWidth">
         <div class="halfWidth">
           <img src="images/mtu_logo.png" />
-          <p style="text-align: center; padding-bottom: 1.5%">
-            <i>Attended Fall 2020 - Spring 2021</i>
-          </p>
+          <p class="imageCaption">Attended Fall 2020 - Spring 2021</p>
         </div>
         <div class="halfWidth">
           <img src="images/uwsp_logo.png" />
-          <p
-            style="text-align: center; padding-bottom: 1.5%; padding-right: 53%"
-          >
-            <i>Attended Fall 2022 - Current</i>
+          <p class="imageCaption">Attended Fall 2022 - Current</p>
+          <p class="imageCaption" id="countdown">
+            Set to graduate in approximately:
           </p>
         </div>
       </div>

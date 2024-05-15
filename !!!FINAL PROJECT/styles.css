@@ -6,7 +6,7 @@ body{
 }
 
 div.headerDiv{
-    background-color: grey;
+    background-color: #FFC82e;
     max-width: 95%;
     margin-left: auto;
     margin-right: auto;
@@ -17,12 +17,12 @@ div.headerDiv{
 }
 
 div.headerDiv ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: #333;
-    border-radius: 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 0px 0px 10px 10px;
 }
 
 div.headerDiv li {
@@ -32,23 +32,48 @@ float: left;
 /* The container - needed to position the dropdown content */
 div.headerDiv li a,
 .dropbtn {
-display: inline-block;
-color: white;
-text-align: center;
-padding: 1vw 2vw;
-text-decoration: none;
-border: solid 1px transparent;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    border: solid 1px transparent;
 
+    background: linear-gradient(to left, #512698, #FFC82e);
+    background-position: bottom;
+    background-size: 100% 0%;
+    background-repeat: no-repeat;
+
+    transition: background-color 0.5s, border 0.5s, background-size 0.5s;
 }
 
+div.headerDiv li a:hover{
+    background: linear-gradient(to left, #512698, #FFC82e);
+    background-position: bottom;
+    background-size: 100% 7%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size 0.5s;
+}
+
+/* Header links (Home, Bio, Etc.) */
 div.headerDiv li a:hover,
 .dropdown:hover .dropbtn {
     background-color: #512698;
     border: solid 1px black;
+    transition: background-color 0.5s, border 0.5s, background-size 0.5s;
 }
 
+/* Set all dropdown items to yellow */
+div.headerDiv .dropdown-content a:hover {
+    transition: background-color 0.5s;
+    background-color: #FFC82e;
+}
+
+/* Change even-numbered dropdown items to purple */
 div.headerDiv li a:hover:nth-of-type(even),
 .dropdown:hover .dropbtn:nth-of-type(even){
+    transition: background-color 0.5s;
     background-color: #512698;
 }
 
@@ -58,10 +83,12 @@ display: inline-block;
 
 /* Dropdown Content (Hidden by Default) */
 div.headerDiv .dropdown-content {
-display: none;
+visibility: hidden;
+opacity: 0;
 position: absolute; /* positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).*/
 background-color: grey;
 min-width: 160px;
+transition: visibility 0.5s, opacity 0.5s;
 }
 
 div.headerDiv .dropdown-content a {
@@ -72,26 +99,51 @@ display: block;
 text-align: left;
 }
 
-div.headerDiv .dropdown-content a:hover {
-background-color: #FFC82e;
+div.headerDiv .dropdown:hover .dropdown-content {
+visibility: visible;
+opacity: 1;
+transition: visibility 0.5s, opacity 0.5s;
 }
 
-div.headerDiv .dropdown:hover .dropdown-content {
-display: block;
+h1{
+    font-size: 250%;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+div#overwatchHeader{
+    background-image: url(images/OW_header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* PRIMARY PAGE CONTENT */
+@media only screen and (max-width:900px){
+    div.halfWidth{
+        /* background-color: lightblue; */
+        min-width: 95%;
+        display: block;
+    }
+}
+
 div.mainContent{
     max-width: 95%;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightslategrey;
+    /* background-color: lightslategrey; */
+    background-color: 	hsl(263, 60%, 37%);
     border-radius: 10px;
     padding-bottom: 1%;
+}
+a:visited{
+    color: red;
+}
+div.mainContent a:link{
+    color:#FFC82e
 }
 
 div.mainContent h2::first-letter{
     font-size: 200%;
+    text-shadow: 2px 2px rgb(0,0,0);
 }
 
 div.halfWidth{
@@ -103,9 +155,10 @@ div.halfWidth{
 
 div.quarterWidth {
     width: 24.5%;
-    background-color: orange;
+    /* background-color: orange; */
     display: inline-block;
     vertical-align: top;
+    padding-left: 5px;
 }
 
 div.thirdWidth {
@@ -124,10 +177,20 @@ div.mainContent h2, div.mainContent p{
     margin-left: 2%;
     max-width: 70%;
 }
+p.imageCaption, a.imageCaption{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-style: italic;
+    padding-left: 13%;
+}
 
 div.mainContent img{
     margin-top: 5%;
     max-width: 65%;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
     /* margin-left: 40%; */
 }
 
@@ -142,4 +205,94 @@ button:hover span {
 
 form button#submit:hover:before{
 content: "Yes, submit to me!";
+}
+
+aside{
+    box-shadow: inset 0 5px 5px -5px white;
+    padding-top: 0.1px;
+}
+
+table#owRanks{
+    margin-top: 5%;
+}
+
+table#owRanks, table#owRanks th, table#owRanks tr, table#owRanks td{
+    border: 1px solid white;
+    text-align: center;
+    padding: 1% 1% 1% 1%;
+}
+table#owRanks th{
+    min-width: 15%;
+}
+
+img#yippeImage{
+    padding-top: 2%;
+    animation: imageMovement 10s infinite linear;
+    max-width: 10%;
+}
+
+@keyframes imageMovement {
+    0%{
+        margin-left: 0%;
+        transform: scaleX(1)
+    }
+    12.5%{
+        transform: scaleX(-1)
+    }
+    25%{
+        margin-left: 90%;
+        transform: scaleX(1)
+    }
+    37.5%{
+        transform: scaleX(-1)
+    }
+    50%{
+        margin-left: 0%;
+        transform: scaleX(1)
+    }
+    62.5%{
+        margin-left: 0%;
+        transform: scaleX(1)
+    }
+    75%{
+        transform: translateY(0%);
+    }
+    77.5%{
+        transform: translateY(-10%);
+    }
+    80%{
+        transform: translateY(0%);
+
+    }
+    82.5%{
+        transform: translateY(-10%);
+    }
+    85%{
+        transform: translateY(0%);
+    }
+    87.5%{
+        transform: translateY(0%);
+
+    }
+    100%{
+        margin-left: 0%;
+        transform: scaleX(1)
+    }
+}
+
+/* Footer */
+div.footer{
+    max-width: 95%;
+    background-color: rgb(20,20,20);
+    font-size: 75%;
+    color: rgb(20,20,20);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+div.footer a:link, div.footer a:visited{
+    color: rgb(20,20,20);
 }

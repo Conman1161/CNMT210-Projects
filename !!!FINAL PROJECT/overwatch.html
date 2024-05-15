@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>My Swag Website</title>
+    <title>Overwatch</title>
   </head>
   <body>
+    <script src="scripts.js"></script>
     <script>
       window.onload = function () {
-        document.getElementById("winton_greetings").play();
+        playWinton();
+        addToOWDiv();
+        console.log("JavaScript finished!");
       };
     </script>
     <audio id="winton_greetings" src="audio/winton-ow-greetings.mp3"></audio>
-    <div class="headerDiv">
+    <div class="headerDiv" id="overwatchHeader">
       <h1>Welcome to my Portfolio Website!</h1>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -39,31 +42,91 @@
     <br />
     <div class="mainContent">
       <div class="halfWidth">
-        <h2>Hello, and welcome to my website!</h2>
+        <h2>Grrrreetings!</h2>
         <p>
-          Here is some placeholder information that should be present on most
-          sub-pages. It's important to have this visible and take up enough
-          space to be noticeable. This could be paired with an image on the
-          right half to have a visual to go along with the text. Make sure this
-          text is at the top of the window, even if you have more elements on
-          the other half.
+          I am a big fan of the game Overwatch, a first-person shooter with two
+          teams of 5 with the primary objective to capture objectives. The game,
+          made by Blizzard Entertainment, originally released in May of 2016
+          with two teams of 6, but re-released at Overwatch 2 in October of 2022
+          with many large changes, along with reducing the team size to 5.
         </p>
+        <p>
+          The Overwatch League, previously Blizzard's premier Overwatch Esports
+          tournament, ran between December 2017 and October 2023. While not the
+          first esports league for Overwatch, it served as the primary league
+          for any player trying to make it in the Overwatch scene. A set number
+          of organizations were allowed to own teams, based and named after
+          various locations (Atlanta Reign, Chengdu Hunters, New York Excelsior,
+          etc.). The final victor of the Overwatch League (Season 6) were the
+          Florida Mayhem, winning $1M in prizing.
+        </p>
+        <p>
+          Currently, the Premier Overwatch Esports Circuit is run by FACEIT in
+          the Overwatch Champions Series (OWCS). UWSP Takes place in NECC'S
+          tournament, which is separate from OWCS. This past semester, we had
+          two teams: Purple and Gold. I played on our Gold team, which made it
+          to 3rd place in Playoffs. Our Purple team made it all the way to
+          Finals in Nationals and won it 4-2! You can watch the recording of
+          that Grand Finals match on our YouTube channel.
+        </p>
+        <!-- This div will have a 'p' element added via scripts.js once the page loads-->
+        <div id="addToMe"></div>
       </div>
       <div class="halfWidth">
-        <div class="halfHeight">
-          <img src="images/placeholder.png" />
-          <p style="text-align: right; padding-right: 5%">
-            Maybe include a caption?
-          </p>
+        <div class="halfWidth" id="teamDiv">
+          <a> <img src="images/reign_logo.png" /></a>
+          <aside>
+            <p class="imageCaption">
+              The team I rooted for during Overwatch League, the Atlanta Reign.
+            </p>
+          </aside>
         </div>
-        <div class="halfHeight">
-          <img src="images/placeholder.png" />
-          <p style="text-align: right; padding-right: 5%">
-            Or perhaps, another picture?
-          </p>
+        <div class="halfWidth">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/NzFDPZG0cW4?si=y-Q9pQXQwHmEMkhd"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            style="padding-top: 5%; max-width: 100%"
+          ></iframe>
+          <aside>
+            <p class="imageCaption">
+              The recording of Purple's Grand Finals match.
+            </p>
+          </aside>
         </div>
       </div>
       <p></p>
+    </div>
+    <br />
+    <div class="footer">
+      <div class="quarterWidth">
+        <p>You found my w i d e miniature secret section!</p>
+      </div>
+      <div class="quarterWidth">
+        <p>Socials:</p>
+        <ul>
+          <li>
+            <a href="https://twitter.com/conman1161">Twitter</a>
+          </li>
+          <li>
+            <a href="https://instagram.com/conman1161">Instagram</a> (inactive)
+          </li>
+        </ul>
+      </div>
+      <div class="quarterWidth">
+        <p>
+          The easiest way to view this is to select all text on screen, which
+          will make it visible against the background
+        </p>
+      </div>
+      <div class="quarterWidth">
+        <p>Congratulations!</p>
+      </div>
     </div>
   </body>
 </html>

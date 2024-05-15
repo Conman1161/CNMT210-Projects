@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>My Swag Website</title>
+    <title>Esports History</title>
   </head>
   <body>
+    <script src="scripts.js"></script>
+    <script>
+      window.onload = function () {
+        setRankTable();
+      };
+    </script>
     <div class="headerDiv">
       <h1>Welcome to my Portfolio Website!</h1>
       <ul>
@@ -33,27 +39,75 @@
     <br />
     <div class="mainContent">
       <div class="halfWidth">
-        <h2>Hello, and welcome to my website!</h2>
+        <h2>Yup, it's gamer time.</h2>
         <p>
-          Here is some placeholder information that should be present on most
-          sub-pages. It's important to have this visible and take up enough
-          space to be noticeable. This could be paired with an image on the
-          right half to have a visual to go along with the text. Make sure this
-          text is at the top of the window, even if you have more elements on
-          the other half.
+          I am a very competitive person when it comes to Overwatch. I have been
+          playing the game since approximately 2018, and I've been big into the
+          competitive mode since. To date, I have 1,096 hours in the competitive
+          game mode alone. You can see my rank history from Overwatch 2 on the
+          right. Unfortunately, while the data from Overwatch 1 is still used to
+          analyze statistics, the competitive history has been cleared for any
+          season prior to Overwatch 2.
+        </p>
+        <p>
+          In my Senior year of High School, I formed the Shawano High School
+          Esports program. At the time, we were only able to play Rocket League
+          and League of Legends due to hardware limitations and rules from the
+          Wisconsin High School Esports Association (WIHSEA) station all players
+          had to play from school. While we didn't place well that year, and
+          with COVID happening the following semester, that chapter of my career
+          closed almost as quick as it began.
+        </p>
+        <p>
+          After COVID happened, school came to a halt and I was unable to
+          compete until I arrived at Michigan Tech. While I didn't make the cut
+          originally in Fall, I was brought in during the Spring semester to
+          play Main Tank. We only had one major tournament, the Michigan
+          Bandwidth Bowl, but we ended with a strong 2nd place, which I'm very
+          proud of considering it was an off-role and I had teammates who were
+          <i>much</i> better than me at the time.
+        </p>
+        <p>
+          Once the nightmare of COVID began to roll away, I transferred to UWSP
+          and immediately took an interest in growing the Esports program on
+          campus. In my first semester at point, I became Vice-President of our
+          campus' Esports program. During that initial year, I helped build a
+          foundation for the program to grow. The next fall, Tristan (the
+          then-President) had to take a leave and I was promoted to President
+          and had a lot of things to manage. After a very long semester, I
+          relieved myself from that position and took a less-intense role of
+          Production Manager. My current role has me streaming most, but
+          preferably all, of our weekly matches for anyone to view. These
+          streams happen at
+          <a href="https://twitch.tv/uwsp_esports">twitch.tv/uwsp_esports</a>,
+          so if you're interested in watching feel free to stop by. We've got
+          big plans to remodel the page for Fall!
         </p>
       </div>
       <div class="halfWidth">
-        <div class="halfHeight">
-          <img src="images/placeholder.png" />
-          <p style="text-align: right; padding-right: 5%">
-            Maybe include a caption?
+        <div class="halfWidth">
+          <table id="owRanks">
+            <thead>
+              <th>Season</th>
+              <th>Final Rank</th>
+              <th>Peak Rank</th>
+              <th>Hours Played</th>
+            </thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+          </table>
+          <p class="imageCaption">
+            A table showing my Overwatch 2 rank history
           </p>
         </div>
-        <div class="halfHeight">
-          <img src="images/placeholder.png" />
-          <p style="text-align: right; padding-right: 5%">
-            Or perhaps, another picture?
+        <div class="halfWidth">
+          <img src="images/shawano_facility.png" />
+          <p class="imageCaption">
+            A picture of Shawano's current esports equipment, taken after I
+            left.<br /><a
+              href="https://www.newmedia-wi.com/content/esports-expanding-shawano-county-schools"
+              >Article Link</a
+            >
           </p>
         </div>
       </div>
